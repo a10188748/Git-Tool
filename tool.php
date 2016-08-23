@@ -63,6 +63,7 @@ class Tool
             return $size." GB";
         }
     }
+
     function sendXlsMail($email, $name, $subject, $content,$filepath)
     {
         require_once ("mailfunction.php");
@@ -123,5 +124,13 @@ class Tool
         $mail->ClearAddresses();
         return true;
     }
+
+    function mime_encode_headers($string) {
+    global $charset;
+	if($string == "") return;
+	if(!eregi("^([[:print:]]*)$",$string))
+		$string = "=?".$charset."?Q?".str_replace("+","_",str_replace("%","=",urlencode($string)))."?=";
+	return $string;
+	}
 }
 ?>
