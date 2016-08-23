@@ -76,8 +76,8 @@ class Tool
         $mail->Host = "localhost";
         // 線上使用設定檔
         $mail->AddAttachment($filepath); // 設定附件檔檔名
-        $mail->SetFrom("service@services.gracegift.com.tw", "Grace gift 官方購物網站 客服系統");
-        $mail->AddReplyTo("service@services.gracegift.com.tw", "Grace gift 官方購物網站 客服系統");
+        $mail->SetFrom("www@www.com.tw", "title");
+        $mail->AddReplyTo("www@www.com.tw", "title");
         $mail->Subject = $subject;
         $mail->AltBody = "看到此文字, 表示您的系統不支援 HTML 模式, 請用 HTML 模式閱讀";
         $mail->MsgHTML($content);
@@ -103,8 +103,8 @@ class Tool
         $mail->Port = 25;
         $mail->Encoding = "base64";    
         $mail->CharSet = "UTF-8";       
-        $mail->SetFrom("service@services.gracegift.com.tw", "Grace gift 官方購物網站 客服系統");      
-        $mail->AddReplyTo("service@services.gracegift.com.tw", "Grace gift 官方購物網站 客服系統");   
+        $mail->SetFrom("www@www.com.tw", "title");
+        $mail->AddReplyTo("www@www.com.tw", "title"); 
         $mail->Subject = $subject;
         $mail->AltBody = "看到此文字, 表示您的系統不支援 HTML 模式, 請用 HTML 模式閱讀";
         $mail->MsgHTML($content);
